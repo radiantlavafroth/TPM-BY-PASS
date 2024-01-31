@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="regpage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Page</title>
+    <style>
+         body {
+            background-color:aqua;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn();
+        }
+
+        form {
+            background: linear-gradient(60deg, red, yellow);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 10px;
+            width: 400px;
+            height: 600px;
+        }
+
+        label {
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+
+        button {
+            width: 50%;
+            padding: 10px;
+            background-color: aquamarine;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #333;
+            font-size: 1em;
+        }
+
+        button.cancel {
+            background-color: gold;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #butt1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .dob label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form action="/submit" method="post" onsubmit="return validateForm()">
+        <!-- <img class="img1" src="/images/nobgimageteam.png" alt=""> -->
+        <div>
+            <label for="Fname">First Name</label>
+            <input type="text" name="Fname" id="Fname" required>
+        </div>
+        <label for="Lname">Last Name</label>
+        <input type="text" name="Lname"  id="Lname" required>
+        <div class="dob">
+            <label for="dob">Enter Your Date of Birth:</label>
+            <input type="date"  name="dob" id="dob">
+        </div>
+        <div class="form">
+            <div class="email">
+                <label for="emailInput">Email:</label>
+                <input type="email" id="emailInput" name="emailInput" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+            </div>
+            <div class="mob">
+                <label for="num">Enter Your Mobile</label>
+                <input type="tel" name="num" pattern="[0-9]{10}" required title="Enter a ten-digit Number">
+            </div>
+            <div class="pass">
+                <label for="pass1">Enter your Password</label>
+                <input id="pass1" type="password" name="pass1" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" required>
+                <br>
+                <label for="pass2">Re-enter the password</label>
+                <input id="pass2" type="password" name="pass" pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}$" required>
+                <div class="ph">
+                    <!-- <label for="img">Input Your Image:</label>
+                    <input type="file" name="img" id=""> -->
+                </div>
+                <div id="butt1">
+                    <button type="submit">Submit
+                       
+                    </button>
+                    <button type="button" class="can">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </form>
+<script >
+function validateForm() {
+  console.log("Function is being called");
+   
+  let pass1 = document.getElementById("pass1").value;
+  let pass2 = document.getElementById("pass2").value;
+  var username = document.getElementById("Fname").value;
+
+  console.log("pass1:", pass1);
+  console.log("pass2:", pass2);
+  console.log("username:", username);
+
+  if (pass1.trim() === pass2.trim()) {
+      alert("Password match");
+  } else {
+      alert("Enter the same password");
+      return false;
+  }
+
+  if (username.trim() === "" || pass1.trim() === "") {
+      alert("Please enter both username and password.");
+      return false; 
+  } else {
+      alert("Registration successful! Username: " + username);
+      return true;
+  }
+} 
+</script>
+</body>
+</html>

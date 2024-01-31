@@ -1,0 +1,72 @@
+body{
+    background: linear-gradient(51deg,#010758,#490d61);
+    background: url(/images/mainpagebg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    
+    background-color: none;
+    color: azure;
+    justify-content: center;
+    position: relative;
+    font-style: italic;
+    position: fixed;
+    left: 600px;
+    font-weight: bolder;
+    font-size: 60px;
+    animation: 6s color infinite;
+    
+}
+
+.class1{
+   display: flex;
+
+ text-align: center;
+   position: fixed;
+   top: 500px;
+   left: 500px;
+}
+button{
+   
+ border: 1px solid white;
+ margin: 100px;
+ border-radius: 10px;
+ cursor: pointer;
+}
+ button{
+    width: 110px;
+    height: 70px;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: bl;
+}
+.logo img{
+    position: fixed;
+    top: 200px;
+    left: 500px;
+    width: 600px;
+    height: 300px;
+    border: 0px solid white;
+    border-radius: 100px;
+    background-color: red;
+}
+@keyframes color{
+ 0%{color: red;}
+ 10%{color: gold;}
+ 20%{color: aqua;}
+ 30%{color:green;}
+ 40%{color: cadetblue;}
+ 50%{color: violet;}
+ 60%{color: lightcoral;}
+ 70%{color:lime;}
+ 80%{color: goldenrod;}
+ 90%{color: gray;}
+ 100%{color:dodgerblue;}
+}
+button:hover{
+    background-color: paleturquoise;
+}

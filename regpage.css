@@ -1,0 +1,74 @@
+body{
+    background: url(/images/bg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+label{
+    font-size: x-large;
+}
+input{
+    width: 40%;
+}
+.frame{
+    background-color: white;
+}
+img{
+    width: 400px;
+   height: 130px;
+  }
+  form {
+    border: 10px solid rgba(255, 255, 255, 0.8);
+    background-image: url(/images/bg.4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 150px;
+    left: 550px;
+    width: 450px;
+    height: 440px;
+    border-radius: 30px;
+ }
+ 
+input{
+    border: 2px solid black;
+    margin: 5px;
+}
+form{
+    color:pink;
+    
+}
+ button{
+  
+    width: 100px;
+    height: 40px;
+    padding: 10px 14px;
+    background-color: aquamarine;
+}
+#name input , #dob {
+     width: 20%;
+}
+
+.can{
+    background-color: red;
+}
+#butt1{
+    display: flex;
+    justify-content: space-evenly;
+}
+.ph input{
+    color: black;
+}
+body {
+    animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
